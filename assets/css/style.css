@@ -227,7 +227,11 @@ a {
 /* === DARK THEME === */
 
 /* === Variables Dark Theme === */
-
+body.dark-theme {
+    --title-color: hsl(var(--hue-color), 12%, 95%);
+    --text-color: hsl(var(--hue-color), 12%, 75%);
+    --body-color: hsl(var(--hue-color), 10%, 16%);
+}
 
 /* === BUTTON TOGGle THEME === */
 .clock__theme {
