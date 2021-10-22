@@ -4,7 +4,7 @@
 /* === VARIABLE CSS === */
 :root {
     /* === COLORS === */
-    --hue-color: 240;
+    --hue-color: 25;
     /* Blue 240 - Green 154 - Orange 25  */
 
     --first-color: hsl(var(--hue-color), 53%, 49%);
@@ -110,8 +110,8 @@ a {
 
 .clock__twelve,
 .clock__six {
-    transform: translateX(-50%) rotate(90deg);
-    left: 50%;
+    transform: rotate(90deg);
+    /* left: 50%; */
 }
 
 .clock__three,
@@ -204,7 +204,8 @@ a {
 }
 
 .clock__text-hour,
-.clock__text-minute {
+.clock__text-minute,
+.clock__text-second {
     font-size: var(--biggest-font-size);
     font-weight: var(--font-medium);
     color: var(--title-color);
@@ -238,11 +239,24 @@ body.dark-theme {
     position: absolute;
     cursor: pointer;
     color: var(--first-color);
-    top: -1rem;
-    right: -1rem;
+    top: -.75rem;
+    right: -.75rem;
     display: flex;
-    padding: 0.25rem;
+    padding: 0.5rem;
     border-radius: 50%;
     box-shadow: inset -1px -1px 1px hsla(var(--hue-color), 0%, 100%, 1),
         inset 1px 1px 1px hsla(var(--hue-color), 30%, 86%, 1);
+}
+
+/* === BOX SHADOW DARK THEME === */
+.dark-theme .clock__circle {
+    box-shadow: 6px 6px 16px hsla(var(--hue-color), 8%, 12%, 1),
+        -6px -6px 16px hsla(var(--hue-color), 8%, 20%, 1),
+        inset -6px -6px 16px hsla(var(--hue-color), 8%, 20%, 1),
+        inset 6px 6px 12px hsla(var(--hue-color), 8%, 12%, 1);
+}
+
+.dark-theme .clock__theme {
+    box-shadow: inset -1px -1px 1px hsla(var(--hue-color), 8%, 20%, 1),
+        inset 1px 1px 1px hsla(var(--hue-color), 8%, 12%, 1);
 }
