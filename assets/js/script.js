@@ -26,6 +26,7 @@ setInterval(clock, 1000);
 /* === CLOCK & DATE TEXT === */
 const textHour = document.getElementById('text-hour'),
     textMinute = document.getElementById('text-minute'),
+    textSecond = document.getElementById('text-second'),
     textAmPm = document.getElementById('text-ampm'),
     dateDay = document.getElementById('date-day'),
     dateMonth = document.getElementById('date-month'),
@@ -37,6 +38,7 @@ const clockText = () => {
     let hh = date.getHours(),
         ampm,
         mm = date.getMinutes(),
+        ss = date.getSeconds(),
         day = date.getDate(),
         month = date.getMonth(),
         year = date.getFullYear();
@@ -56,13 +58,21 @@ const clockText = () => {
     if (hh < 10) hh = `0${hh}`;
 
     //SHOW HOURS
-    textHour.textContent = `${hh}:`;
+    textHour.innerText = `${hh}:`;
 
     // add '0' before minute
     if (mm < 10) mm = `0${mm}`;
 
     // SHOW MINUTE
-    textMinute.textContent = `${mm}`;
+    textMinute.textContent = `${mm}:`;
+
+    // add '0' before second
+    if (ss < 10) ss = `0${ss}`;
+
+    console.log(ss);
+
+    // SHOW SECONDS
+    textSecond.textContent = `${ss}`;
 
     // show am or pm
     textAmPm.textContent = ampm;
