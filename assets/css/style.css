@@ -223,3 +223,22 @@ a {
     font-size: var(--small-font-size);
     font-weight: var(--font-medium);
 }
+
+/* === DARK THEME === */
+
+/* === Variables Dark Theme === */
+
+
+/* === BUTTON TOGGle THEME === */
+.clock__theme {
+    position: absolute;
+    cursor: pointer;
+    color: var(--first-color);
+    top: -1rem;
+    right: -1rem;
+    display: flex;
+    padding: 0.25rem;
+    border-radius: 50%;
+    box-shadow: inset -1px -1px 1px hsla(var(--hue-color), 0%, 100%, 1),
+        inset 1px 1px 1px hsla(var(--hue-color), 30%, 86%, 1);
+}
