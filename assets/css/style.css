@@ -148,7 +148,7 @@ a {
 .clock__minute,
 .clock__second {
     position: absolute;
-    display: flex;
+    display: none;
     justify-content: center;
 }
 
