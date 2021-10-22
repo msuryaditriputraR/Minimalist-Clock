@@ -68,9 +68,6 @@ const clockText = () => {
 
     // add '0' before second
     if (ss < 10) ss = `0${ss}`;
-
-    console.log(ss);
-
     // SHOW SECONDS
     textSecond.textContent = `${ss}`;
 
